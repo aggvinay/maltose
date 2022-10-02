@@ -16,9 +16,23 @@
             }
             return code;
         }
+        function getRandomColorLight() {
+            return 'rgb(' +
+                (Math.floor(Math.random()*56)+200) + ', ' +
+                (Math.floor(Math.random()*56)+200) + ', ' +
+                (Math.floor(Math.random()*56)+200) +
+                ')';
+        }
+        function getRandomColorDark() {
+            return 'rgb(' +
+                (Math.floor(Math.random()*56)+100) + ', ' +
+                (Math.floor(Math.random()*56)+100) + ', ' +
+                (Math.floor(Math.random()*56)+100) +
+                ')';
+        }
 
         function background() {
-            document.body.style.background = getColorCode()
+            document.body.style.background = getRandomColorLight()
         }
 
         function text() {
@@ -26,7 +40,7 @@
         }
 
         function effect() {
-            document.getElementById("convo").style.filter = "drop-shadow(3px 3px 3px " + getColorCode() + ")"
+            document.getElementById("convo").style.filter = "drop-shadow(3px 3px 3px " + getRandomColorDark() + ")"
         }
 
         function all() {
