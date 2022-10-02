@@ -1,0 +1,23 @@
+#convo {
+    height: 100%;
+    width: 100%;
+    padding: 10%;
+    font-size: xxx-large;
+    top: 50%;
+    left: 50%;
+}
+
+
+
+body {
+    font-family: Calibri;
+    align-content: center;
+}
+
+#but {
+    visibility: hidden;
+}
+
+#blank {
+    padding-left: 10%;
+}

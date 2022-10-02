@@ -1,1 +1,46 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lazy</title>
+    <link rel="stylesheet" href="lazy.css">
+</head>
+<body onload="all()">
+<div id="convo">
+    <script>
+        function getColorCode() {
+            var makeColorCode = '0123456789ABCDEF';
+            var code = '#';
+            for (var count = 0; count < 6; count++) {
+                code = code + makeColorCode[Math.floor(Math.random() * 16)];
+            }
+            return code;
+        }
+
+        function background() {
+            document.body.style.background = getColorCode()
+        }
+
+        function text() {
+            document.getElementById("convo").style.color = getColorCode()
+        }
+
+        function effect() {
+            document.getElementById("convo").style.filter = "drop-shadow(3px 3px 3px " + getColorCode() + ")"
+        }
+
+        function all() {
+            background()
+            text()
+            effect()
+        }
+    </script>
+    <p>
+        <label id="person_a" class="person">A:</label> Is all of this so easy for you ? </br>
+        <label id="person_b" class="person">B:</label> No, It never was </br>
+        <label id="but" class="but">But</label>
+        <label id="blank" class="blank">...</label>
+    </p>
+</div>
+</body>
+</html>
